@@ -2,18 +2,18 @@
   # Combine all Strings present in the AoA into a single value and return it
 
 def join_nested_strings(src)
-  nested_strings = []
+
   row_index = 0
+  nested_strings = []
     while row_index < src.count do
-      element_index = 0
+      inner_index = 0
       new_string = ""
-    while element_index < src[row_index].length do
-      if src[row_index][element_index].class == String
-        max_value = src[row_index][element_index]
+    while inner_index < src[row_index].length do
+      if src[row_index][inner_index].class == String
+        nested_strings << src[row_index][inner_index] + " "
       end
-        element_index += 1
+        inner_index += 1
     end
-      low_temp_src << max_value
       row_index += 1
     end
       low_temp_src
