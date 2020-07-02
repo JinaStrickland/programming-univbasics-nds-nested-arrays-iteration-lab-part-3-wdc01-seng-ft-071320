@@ -14,7 +14,7 @@ def join_nested_strings(src)
       end
         inner_index += 1
     end
-      nested_strings.push << src[row_index][inner_index] + " "
+      nested_strings.push << src[row_index][inner_index] + ""
       row_index += 1
     end
       low_temp_src
